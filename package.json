@@ -1,0 +1,28 @@
+{
+  "name": "team-roster-generator",
+  "version": "1.0.0",
+  "description": "Creates a team",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheBryan-Acosta/Team-Roster-Generator.git"
+  },
+  "author": "Bryan Acosta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheBryan-Acosta/Team-Roster-Generator/issues"
+  },
+  "homepage": "https://github.com/TheBryan-Acosta/Team-Roster-Generator#readme",
+    "devDependencies": {
+    "jest": "^27.4.5"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
+}
