@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Creates a team",
   "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
   "scripts": {
     "test": "jest"
   },
@@ -19,7 +16,7 @@
     "url": "https://github.com/TheBryan-Acosta/Team-Roster-Generator/issues"
   },
   "homepage": "https://github.com/TheBryan-Acosta/Team-Roster-Generator#readme",
-    "devDependencies": {
+  "devDependencies": {
     "jest": "^27.4.5"
   },
   "dependencies": {
