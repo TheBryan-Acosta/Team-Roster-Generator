@@ -15,6 +15,7 @@
 
 .card {
 	box-shadow: 5px 5px 5px rgb(131, 131, 131);
+	border-radius: 5px;
 }
 
 .theTeam {

@@ -10,15 +10,29 @@ const employees = [];
 async function addEmployee() {
 	const employee = await inquirer.prompt([
 		{
+			type: "confirm",
+			name: "confirmMan",
+			message: "Would you like to add a manager first?",
+			default: true,
+			when: () => employees.length == 0,
+		},
+		{
 			type: "list",
 			name: "role",
 			message: "What is your employees role?",
 			choices: ["Engineer", "Intern", "Manager"],
+			when: (answers) => employees.length > 0 || answers.confirmMan == false,
 		},
 		{
 			type: "input",
 			name: "name",
 			message: "What is your employees name?",
+			validate: (nameInput) => {
+				if (nameInput) {
+					return true;
+				}
+				return "Please provide a valid name";
+			},
 		},
 		{
 			type: "input",
@@ -38,6 +52,12 @@ async function addEmployee() {
 			type: "input",
 			name: "email",
 			message: "What is your employees email?",
+			validate: (emailInput) => {
+				if (emailInput.includes("@") && emailInput.includes(".")) {
+					return true;
+				}
+				return "Please provide a valid email address";
+			},
 		},
 		{
 			type: "input",
@@ -55,7 +75,7 @@ async function addEmployee() {
 			type: "input",
 			name: "officenum",
 			message: "What is your managers office number?",
-			when: (answers) => answers.role === "Manager",
+			when: (answers) => answers.role === "Manager" || !answers.role,
 		},
 		{
 			type: "confirm",
@@ -70,11 +90,11 @@ async function addEmployee() {
 	if (role == "Intern") {
 		const newemployee = new Intern(employee);
 		employees.push(newemployee);
-	} else if (role == "Manager") {
-		const newemployee = new Manager(employee);
+	} else if (role == "Engineer") {
+		const newemployee = new Engineer(employee);
 		employees.push(newemployee);
 	} else {
-		const newemployee = new Engineer(employee);
+		const newemployee = new Manager(employee);
 		employees.push(newemployee);
 	}
 	if (employee.confirmAddEmployee) {
