@@ -3,6 +3,7 @@ const Employee = require("../lib/Employee");
 //This is the test object inquirer will pass.
 const testObj = require("../lib/Testployee");
 
+//this is the test file for our Employee contructor and methods
 test("creates the employee object", () => {
 	const employee = new Employee(testObj);
 

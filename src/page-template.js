@@ -1,7 +1,13 @@
 employeeBox = (employee) => {
+	//Destructure the employee that is passed.
+	//their special attribute will be the rest, then we get the value of the key at index 0.
 	const { name, id, email, role, ...special } = employee;
 	const specialVal = special[Object.keys(special)[0]];
 
+	// assign any extra information based on role and their icons.
+	// engineers will have a link to their github
+	// managers with their office number
+	// and interns with their school
 	if (role === "Intern") {
 		var roleUnique = `School: ${specialVal}`;
 		var position = role;
@@ -20,9 +26,11 @@ employeeBox = (employee) => {
 		var icon = `<i class="fas fa-mug-hot"></i>`;
 	}
 
-	return `<div class="card border-0 m-3" style="width: 18rem;">
+	// return the string literal for the employee card
+	return `<!-- ${name}'s Card -->
+<div class="card border-0 m-3" style="width: 18rem;">
   <div class="card-body">
-    <h4 class="card-title">${name}</h5>
+   <h4 class="card-title">${name}</h5>
     <h5 class="card-title">${icon} ${position}</h5>
   </div>
   <div class="card-footer">
@@ -32,9 +40,12 @@ employeeBox = (employee) => {
       <li class="list-group-item">${roleUnique}</li>
     </ul>
   </div>
-</div>`;
+</div>
+`;
 };
 
+// return string literal for the html page, the employees object is mapped to iterate through the array of objects
+// and the object passed into employeeBox function will return the string literal for that employee card.
 module.exports = (employees) => {
 	return `<!DOCTYPE html>
 <html lang="en">

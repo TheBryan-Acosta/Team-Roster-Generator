@@ -5,9 +5,12 @@ const Manager = require("./lib/Manager");
 const generatePage = require("./src/page-template");
 const { writeFile, copyFile } = require("./utils/generate-page");
 
+//create our employees array to store our employees in a array of objects
 const employees = [];
 
 async function addEmployee() {
+	//prompt user to input data for their employee, will prompt if they would like to start off with a manager first.
+	//store anwsers in employee
 	const employee = await inquirer.prompt([
 		{
 			type: "confirm",
@@ -85,6 +88,9 @@ async function addEmployee() {
 		},
 	]);
 
+	//destructure the role input to validate which contructor to use.
+	//the beggining manager has a role of undefined but we know this so we validate it as a manager in the else statement
+	//after that we push the new employee into our employees array
 	const { role } = employee;
 
 	if (role == "Intern") {
@@ -97,11 +103,14 @@ async function addEmployee() {
 		const newemployee = new Manager(employee);
 		employees.push(newemployee);
 	}
+	// if we prompt to add another employee we call addEmployee again (wont prompt the first manager validation)
 	if (employee.confirmAddEmployee) {
-		addEmployee(employees);
-	} else {
-		console.log(employees);
+		addEmployee();
+	}
+	//we pass the employees arr into our page template, write that file then copy our style hseet into dist
+	else {
 		writeFile(generatePage(employees)).then(copyFile());
+		console.log("File Created! Find it in your dist directory!");
 		return;
 	}
 }
