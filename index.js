@@ -42,6 +42,12 @@ async function addEmployee() {
 			name: "id",
 			message: "What is your employees id?",
 			validate: (idInput) => {
+				//we use parseInt idInput to zap away the characters other than numbers,
+				//then we check if idInput is falsy (undefined, (will be undefined if the user entered nothing) or '', (will be '' if there are no numbers)
+				// if its falsy the validation failed.
+				// or if we take that left over numbers and convert it to a string and take the length of that string,
+				// and the initial idInput (what the user entered) and if they are not equal, then there are characters other than numbers
+				// which would then fail the validation.
 				if (
 					!parseInt(idInput) ||
 					parseInt(idInput).toString().length != idInput.length
@@ -66,18 +72,36 @@ async function addEmployee() {
 			type: "input",
 			name: "github",
 			message: "What is your engineers github?",
+			validate: (githubInput) => {
+				if (githubInput) {
+					return true;
+				}
+				return "Please provide a valid name";
+			},
 			when: (answers) => answers.role === "Engineer",
 		},
 		{
 			type: "input",
 			name: "school",
 			message: "What is your interns school?",
+			validate: (schoolInput) => {
+				if (schoolInput) {
+					return true;
+				}
+				return "Please provide a valid name";
+			},
 			when: (answers) => answers.role === "Intern",
 		},
 		{
 			type: "input",
 			name: "officenum",
 			message: "What is your managers office number?",
+			validate: (officenumInput) => {
+				if (officenumInput) {
+					return true;
+				}
+				return "Please provide a valid name";
+			},
 			when: (answers) => answers.role === "Manager" || !answers.role,
 		},
 		{

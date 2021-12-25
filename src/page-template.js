@@ -40,8 +40,7 @@ employeeBox = (employee) => {
       <li class="list-group-item">${roleUnique}</li>
     </ul>
   </div>
-</div>
-`;
+</div>`;
 };
 
 // return string literal for the html page, the employees object is mapped to iterate through the array of objects
