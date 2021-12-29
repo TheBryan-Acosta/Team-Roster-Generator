@@ -18,9 +18,9 @@ jest for testing our employee contructors.
 
 A sample of the webpage is contained inside the dist folder already.
 
-## **Examples**
+## **Walkthrough**
 
-This Video will give steps on how to install and use this product
+https://youtu.be/nqwony4sq1o
 
 ## **Installation**
 
