@@ -4,11 +4,14 @@ GitHub Link : https://github.com/TheBryan-Acosta/Team-Roster-Generator
 
 ## **Description**
 
-Challenge 10 This Weeks challenge was to create a Team Generator
+Challenge 10 This Weeks challenge was to create a CLI based HTML generator
 
 ### **What was developed**
 
-A Professional team generator, with managers, engineers, and interns
+A fully customizable professional team roster generator
+-The user will be able to navigate through a simple menu to add as many employees as they wish
+-This application will create a HTML file including each employee and their details on the page. 
+
 
 ### **Development** -
 
@@ -20,7 +23,12 @@ A sample of the webpage is contained inside the dist folder already.
 
 ## **Walkthrough**
 
-https://youtu.be/nqwony4sq1o
+### **Downloading**
+
+First clone the repository to your desired location via HTTPS or SSH found here:
+<img width="1440" alt="Screen Shot 2022-07-11 at 12 53 03 AM" src="https://user-images.githubusercontent.com/82281061/178371428-e8376d0e-4cc2-4637-9684-ff212d782a0e.png">
+<img width="1440" alt="Screen Shot 2022-07-11 at 12 53 12 AM" src="https://user-images.githubusercontent.com/82281061/178371476-13ec7737-638b-4366-9c92-5d52af0c28d6.png">
+
 
 ## **Installation**
 
