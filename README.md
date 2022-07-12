@@ -21,13 +21,32 @@ jest for testing our employee contructors.
 
 A sample of the webpage is contained inside the dist folder already.
 
-## **Walkthrough**
+## **Guide**
 
-### **Downloading**
+### **Open a terminal at the downloaded folders location**
+<img width="1440" alt="Screen Shot 2022-07-11 at 11 15 54 PM" src="https://user-images.githubusercontent.com/82281061/178407358-33d53ab7-d361-4d24-9033-43088a6618bd.png">
 
-First clone the repository to your desired location via HTTPS or SSH found here:
-<img width="1440" alt="Screen Shot 2022-07-11 at 12 53 03 AM" src="https://user-images.githubusercontent.com/82281061/178371428-e8376d0e-4cc2-4637-9684-ff212d782a0e.png">
-<img width="1440" alt="Screen Shot 2022-07-11 at 12 53 12 AM" src="https://user-images.githubusercontent.com/82281061/178371476-13ec7737-638b-4366-9c92-5d52af0c28d6.png">
+---
+Run these two commands
+```
+npm i
+```
+followed by: 
+```
+node index.js
+```
+your terminal should now be running the team roster generator.
+
+<img width="1440" alt="Screen Shot 2022-07-11 at 1 07 51 AM" src="https://user-images.githubusercontent.com/82281061/178408018-1168c8a8-1927-4e29-925e-e224e0c427e7.png">
+
+you may now fill out the prompts to start creating your team.
+
+<img width="1440" alt="Screen Shot 2022-07-11 at 1 15 15 AM" src="https://user-images.githubusercontent.com/82281061/178408614-9774a91d-9624-47e8-a0f7-85b6207b354c.png">
+
+once finished a index.html will be created in your dist directory, where you may open in your browser, or view the html file with your preferred text editor
+<img width="1440" alt="Screen Shot 2022-07-11 at 1 18 46 AM" src="https://user-images.githubusercontent.com/82281061/178408908-ca36b073-8508-4b80-8660-cb9fdc2977af.png">
+<img width="1440" alt="Screen Shot 2022-07-11 at 1 19 09 AM" src="https://user-images.githubusercontent.com/82281061/178408914-a0cf76b7-b385-4e63-8e21-01e08d290acb.png">
+<img width="1440" alt="Screen Shot 2022-07-11 at 1 17 25 AM" src="https://user-images.githubusercontent.com/82281061/178408920-ab152124-ee60-4451-a754-df599d6aa829.png">
 
 
 ## **Installation**
